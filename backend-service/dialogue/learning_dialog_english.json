@@ -1,0 +1,298 @@
+{"dialog":[
+	{
+		"dialog_id":"learning_english.1",
+		"intent":"language_training",
+		"response":{
+			"en":"It's great that you want to start speaking in English. :br: Before we begin, I would like to find out a little about you. How well do you know English?",
+			"ar":"",
+			"quick_replies":[{
+				"title":"I don't know",
+				"payload":"I don't know"
+			},
+			{
+				"title":"I know a little",
+				"payload":"I know a little"
+			}],
+			"EOC" : false
+		}
+	},
+
+	{
+		"dialog_id":"learning_english.1.0",
+		"intent":"no_english",
+		"entities":[
+			{
+				"entity":"language",
+				"response":{
+					"en":"What languages do you speak?",
+					"ar":"",
+					"attachments":[
+						{
+							"contentType":"multiSelectCard",
+							"body":[
+								{
+									"content":null,
+									"title":"Please select your language/s.",
+									"subtitle":null,
+									"actions":[
+										{
+											"title":"Tagalog",
+											"payload":"Tagalog"
+										},
+										{
+											"title":"Tamil",
+											"payload":"Tamil"
+										}
+									]
+							
+								}
+							]
+						}
+					]
+				},
+				"invalid_response": {
+					"attachments":[
+						{
+							"contentType":"multiSelectCard",
+							"body":[
+								{
+									"content":null,
+									"title":"Please select your language/s.",
+									"subtitle":null,
+									"actions":[
+										{
+											"title":"Tagalog",
+											"payload":"Tagalog"
+										},
+										{
+											"title":"Tamil",
+											"payload":"Tamil"
+										}
+									]
+							
+								}
+							]
+						}
+					]
+				}
+			},
+				{
+					"entity":"country",
+					"response":{
+						"en":"It's okay. Let's begin by finding out which country are you from?",
+						"ar":"",
+						"attachments":[
+                            {
+                                "mode":null,
+                                "contentType":"countrySelection",
+                                "body":[
+									{
+										"content":"",
+										"title":"Select your country",
+										"subtitle":"",
+										"actions": [
+											{
+												"title":"Select country",
+												"payload":"Select country"
+											}
+										]
+									}
+								]
+							}
+						]     
+					},
+					"invalid_response": {
+						"en":"I'm sorry but the application doesn't support your country yet.",
+						"ar":"",
+						"attachments":[
+                            {
+                                "mode":null,
+                                "contentType":"countrySelection",
+                                "body":[
+									{
+										"content":"",
+										"title":"Select country",
+										"subtitle":"",
+										"actions": [
+											{
+												"title":"Select country",
+												"payload":"Select country"
+											}
+										]
+									}
+								]
+							}
+						] 
+					}
+				}
+
+			],
+		"response":{
+			"en":"Please watch the video below",
+			"ar":"",
+			"action":"learnsomething",
+			"quick_replies":[
+			{
+				"title":"I have finished the video",
+				"payload":"I have finished the video training_1"
+			}
+			],
+			"attachments":[
+				{
+					"contentType":"vidCard",
+					"body":[
+						{
+							"content": "https://www.youtube.com/embed/xug75AJdj0k",
+							"title" : null,
+							"subtitle" : null,
+							"actions":[
+								{
+									"title": "Show me more!",
+									"payload":"Show More V122"
+								}
+							]
+						}
+					]
+				}
+			],
+			"EOC" : true
+		}
+
+	},
+	{
+		"dialog_id":"learning_english.1.1",
+		"intent":"little_english",
+		"assess":{
+			"assessment":[
+				"learning_english_assessment.1"
+			]
+			
+		},
+		"response":{
+			"action":"assesment"
+		},
+		"assesment_response":[
+			{
+				"forward_node": "learning_english.1.1.0",
+				"EOC" : false
+			},
+			{
+				"forward_node": "learning_english.1.1.1",
+				"EOC" : false
+			}
+		]
+	},
+	{
+		"dialog_id":"learning_english.1.1.0",
+		"intent":"",
+		"assess":{
+			"assessment":[
+				"learning_english_assessment.2"
+			]
+			
+		},
+		"response":{
+			"action":"assesment"
+		},
+		"assesment_response":[
+			{
+				"forward_node": "learning_english.1.0",
+				"EOC" : false
+			},
+			{
+				"en":"Please watch video for English 1",
+           		"ar":"",
+            	"attachments":[
+					{
+						"contentType":"vidCard",
+						"body":[
+							{
+								"content": "https://www.youtube.com/embed/xug75AJdj0k",
+								"title" : null,
+								"subtitle" : null,
+								"actions":[
+									{
+										"title": "Show me more!",
+										"payload":"Show More V122"
+									}
+								]
+							}
+						]
+					}
+				],
+				"EOC" : true
+			}
+		]
+	},
+	{
+		"dialog_id":"learning_english.1.1.1",
+		"intent":"",
+		"assess":{
+			"assessment":[
+				"learning_english_assessment.3"
+			]
+			
+		},
+		"response":{
+			"action":"assesment"
+		},
+		"assesment_response":[
+			{
+				"en":"Please watch video for English 1",
+           		"ar":"",
+            	"attachments":[
+					{
+						"contentType":"vidCard",
+						"body":[
+							{
+								"content": "https://www.youtube.com/embed/xug75AJdj0k",
+								"title" : null,
+								"subtitle" : null,
+								"actions":[
+									{
+										"title": "Show me more!",
+										"payload":"Show More V122"
+									}
+								]
+							}
+						]
+					}
+				],
+				"EOC" : true
+			},
+			{
+				"en":"Please watch video for English 2",
+           		"ar":"",
+				   "attachments":[
+					{
+						"contentType":"vidCard",
+						"body":[
+							{
+								"content": "https://www.youtube.com/embed/Btwfb8PjPyE",
+								"title" : null,
+								"subtitle" : null,
+								"actions":[
+									{
+										"title": "Show me more!",
+										"payload":"Show More V122"
+									}
+								]
+							}
+						]
+					}
+				],
+				"EOC" : true
+			}
+		]
+	},
+	{
+		"dialog_id":"cannot_understand",
+		"response":{
+			"en":"Hmm, sorry I didn't quite catch that.",
+			"ar":"",
+			"EOC" : true
+		}
+
+	}
+	
+]}

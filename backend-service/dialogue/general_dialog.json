@@ -1,0 +1,60 @@
+{"dialog":[
+	{
+		"dialog_id":"mapping.1",
+		"intent":"learn",
+		"response":{
+			"EOC":true,
+			"en":"Hi! Glad to know that you want to learn something new. :br: Let's start by setting a goal.",
+            "ar":"",
+			"attachments":[
+				{
+					"mode": null,
+					"contentType":"selectionChips",
+					"body":[
+						{
+							"content": "",
+							"title" : null,
+							"subtitle" : null,
+							"actions":[
+								{
+									"title":"Speak in English",
+									"payload":"Language training"
+								},
+								{
+									"title":"Using the internet",
+									"payload":"Using the internet"
+								},
+								{
+									"title":"Writting emails",
+									"payload":"Writting emails"
+								},
+								{
+									"title":"About UAE",
+									"payload":"About UAE"
+								}
+							]
+						}
+					]
+				}
+			]	
+		}
+    },
+    {
+		"dialog_id":"learning_dialog.7",
+		"intent":"view_content",
+		"response":{
+			"EOC":true,
+			"en":"View Content Options: ",
+			"ar":"",
+			"quick_replies":[{
+				"title":"Select Lesson",
+				"payload":"Select Lesson"
+			},
+			{
+				"title":"Choose other Goal",
+				"payload":"Choose other Goal"
+			}]
+		}
+	}
+]
+}

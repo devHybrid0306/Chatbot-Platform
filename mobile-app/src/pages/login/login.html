@@ -1,0 +1,50 @@
+<!--
+  Generated template for the LoginPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Login</ion-title>
+    <ion-buttons end>
+            <button ion-button icon-only (click)="dismiss()">
+                <ion-icon name="close"></ion-icon>
+            </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+<ion-content >
+    <ion-item lines="none">
+        <ion-label floating>Username</ion-label>
+        <ion-input type="text" color="loginText" [(ngModel)]="viewModel.username"></ion-input>
+    </ion-item>
+    <ion-item lines="none">
+        <ion-label floating>Password</ion-label>
+        <ion-input type="password"  [(ngModel)]="viewModel.password"></ion-input>
+        <button ion-button clear color="dark" type="button" item-right>
+            <ion-icon name="eye" item-right></ion-icon>
+        </button>
+    </ion-item>
+    <div class="login-button-container">
+        <button ion-button block 
+        class="login-button"
+        (click) = "onLogin()"
+        [disabled]="(viewModel.username == undefined || viewModel.password == undefined) || (viewModel.username == '' || viewModel.password == '')">Login</button>
+    </div>
+    <div class="other-options-container">
+        <div class="other-option left" (click)="onForgotPassword()">FORGOT PASSWORD</div>
+        <div class="other-option right" (click)="onRegister()">REGISTER</div>
+    </div>
+    <div class="fb-button-container">
+        <button ion-button block 
+        class="fb-login-button"
+        (click) = "onFBLogin()">
+            
+            <ion-icon slot="icon-left" name="logo-facebook" class="left"></ion-icon> 
+            Login using facebook
+    
+        </button>
+    </div>
+</ion-content>

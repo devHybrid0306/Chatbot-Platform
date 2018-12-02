@@ -1,0 +1,17 @@
+<!-- Generated template for the SelectionCardComponent component -->
+<div class="message-row">
+    <div class="message-box">
+        <div class="selection-card-text">{{componentData.text}}</div>
+        <div *ngFor="let item of componentData.selectionItems; let i = index">
+            <div [id]="i" 
+                class="selection-card-item"
+                (click)="(isEnabled) ? onSelect($event) : null">
+                <span [id]="i" class="selection-card-item-text" color="primary">{{item.title}}</span>
+                <div class="selection-decoration">
+                    <ion-icon name="checkmark-circle" color="primary" 
+                        *ngIf='item.isSelected'></ion-icon>
+                </div>
+            </div>
+        </div>            
+    </div>
+</div>

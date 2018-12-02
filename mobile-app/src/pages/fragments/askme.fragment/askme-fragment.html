@@ -1,0 +1,16 @@
+<div>
+       
+    <div class="main-page-picker-title">
+        What would you like to start with today? 
+    </div>
+           
+    <ion-list>
+         <div *ngFor="let task of viewModel.taskSelectionList; let i = index">
+            <ion-item detail-push (click)="onItemSelect($event)">
+                <ion-label [id]="'item-' + i" class="main-page-picker-item">
+                    {{task}}
+                </ion-label>
+            </ion-item>
+        </div>
+    </ion-list>
+</div>

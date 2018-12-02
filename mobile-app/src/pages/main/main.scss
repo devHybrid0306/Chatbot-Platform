@@ -1,0 +1,63 @@
+page-main {
+
+    .banner {
+        padding: 56px 56px 0px 56px;
+        margin-bottom: 0px;
+        display: grid;
+    
+    }
+    
+    .banner-text-header {
+        font-family: 'Merriweather', serif;
+        font-weight: bold;
+    }
+    
+    .banner-text-normal {
+        font-family: 'Barlow', serif;
+    
+    }
+    
+    .login-button {
+        color: white;
+        font-family: 'Barlow', sans-serif;
+        font-weight: bolder;
+        font-size: 14px;
+        width: 150px;
+        height: 36px;
+        margin-top: 30px;
+    }
+    
+    .main-page-picker {
+        //position: absolute;
+        bottom: 0px;
+        //background-color: #ccc;
+        margin-top: 30px;
+        width: 100%;
+    
+        
+    }
+    
+    .main-page-container {
+        height: 100%;
+        width: 100%;
+        overflow: auto;
+        background-color: transparent;
+    }
+    
+    .main-page-picker-title {
+        font-family: 'Barlow', serif;
+        font-weight: bolder;
+        padding-left: 10px;
+        flex-wrap: wrap;
+        font-size: 16px;
+    }
+    
+    .main-page-picker-item {
+        font-family: 'Barlow', serif;
+        padding-left: 10px;
+    }
+    
+    ion-item.main-page-picker {
+        background-color: transparent;
+    }
+}

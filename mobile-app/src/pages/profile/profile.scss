@@ -1,0 +1,135 @@
+page-profile {
+
+    .profile-row {
+        width: 100%;
+        height: 56px;
+    }
+
+    .profile-section {
+        background: #efefef;
+        font-family: 'Barlow', sans-serif;
+        font-weight: bolder;
+        font-size: 18px;
+        color: black;
+        text-align: left;
+        line-height: 50px;
+        padding-left: 20px;
+    }
+
+
+    .profile-info {
+        display: -webkit-inline-box;
+        background: white;
+        font-family: 'Barlow', sans-serif;
+        font-size: 18px;
+        color: black;
+        text-align: left;
+        line-height: 50px;
+       
+        border-color: #888888;
+        border-top: 0.5 solid #888;
+    }
+
+    .profile-info-label {
+        color: gray;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+
+    
+    .profile-info-value {
+        color: gray;
+        margin-right: 20px;
+        text-align: right;
+    }
+
+    .profile-header {
+        background-image: linear-gradient(to right, #fff6d4 , #f8d6ce);
+        height: 120px;
+        color: black;
+        text-align: left;
+        display: -webkit-inline-box;
+        vertical-align: middle;
+        line-height: 100px;
+        padding-left: 30px;
+    }
+
+    .profile-header-pic {
+        border-radius: 24px;
+        width: 48px;
+        height: 48px;
+        background: gray;
+        display: -webkit-inline-box;
+        vertical-align: -webkit-baseline-middle;
+        margin-left: auto;
+        margin-right: auto;
+        overflow: hidden;
+    }
+
+    .profile-header-text {
+        font-family: 'Merriweather', serif;
+        font-weight: bold;
+        font-size: 20px;
+        margin: 0 0 0 20px;
+        display: -webkit-inline-box;
+        vertical-align: -webkit-baseline-middle;
+    }
+
+    .toolbar-title-ios {
+        text-align: start !important;
+    }
+    .toolbar-ios ion-title {
+        padding: 0px 20px 1px !important;
+    }
+   
+    .no-scroll {
+        height: 100%;
+        //background-color: #fff7f0;
+        background-image: linear-gradient(to bottom, #FBF5F4, #fff);
+        display: block;
+    }
+  
+    .top-button {
+        font-family: 'Barlow', sans-serif;
+        font-weight: bolder;
+        background-color: #dd5239;
+        color: white;
+        margin-right: 30px;
+        flex-wrap: wrap;
+        vertical-align: -webkit-baseline-middle;
+    }
+    
+    .message-footer {
+      display: -webkit-flex;
+      background-color: #888888;
+    }
+    
+    .toolbar-content-md {
+        display: -webkit-flex;
+        -webkit-box-orient: horizontal;
+    }
+    
+    
+    // iOS specific
+    .text-input-ios {
+        width: calc(100% - 8px);
+        margin: 11px 11px 11px 5px;
+        padding: 0px 5px 0px 5px;
+    }
+    
+    .toolbar-content-ios {
+        display: -webkit-box;
+    }
+    
+    // windows phone specific
+    .text-input-wp {
+        border: none;
+        margin: 5px 8px;
+        padding: 0px 5px 0px 5px;
+        width: calc(100% - 8px - 8px);
+    }
+    
+    .toolbar-content-wp {
+        display: -webkit-box;
+    }
+}

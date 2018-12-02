@@ -1,0 +1,28 @@
+simple-message {
+    .message {
+        border-radius: 24px;
+        padding: 10px; 
+        margin: 10px;
+        flex-wrap: wrap;
+        max-width: 70%;
+    }
+
+  
+    .messageLeft {
+        margin: 10px;
+        background-color: white;
+        color: black;
+        box-shadow: 1px 1px 7px #cccccc;
+        float: left;
+        
+    }
+   
+
+    .messageRight {
+        background-image: linear-gradient(to right, #fff6d4 , #f8d6ce);
+        color: black;
+        float: right;
+        box-shadow: 1px 1px 7px #cccccc;
+    }
+
+}

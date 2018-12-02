@@ -1,0 +1,10 @@
+<!-- Generated template for the SelectionChipsComponent component -->
+<div class="message-row">
+    <div class="chip-container">
+        <div *ngFor="let item of componentData.selectionItems; let i = index">   
+            <div [id]="i" class="chip-item message" (click)="onSelect($event)">
+                    {{item.title}}
+            </div>
+        </div>
+    </div>
+</div>

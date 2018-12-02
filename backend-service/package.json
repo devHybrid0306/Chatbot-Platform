@@ -1,0 +1,32 @@
+{
+  "name": "backend-service",
+  "version": "1.0.0",
+  "description": "backend service for SLBOT",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "hendrick.s.acosta",
+  "license": "ISC",
+  "dependencies": {
+    "assert": "^2.0.0",
+    "body-parser": "^1.19.0",
+    "connect": "^3.7.0",
+    "dotenv": "^8.0.0",
+    "dotenv-expand": "^5.1.0",
+    "express": "^4.17.1",
+    "http": "0.0.0",
+    "ibm-watson": "^4.2.1",
+    "json-concat": "0.0.1",
+    "json-query": "^2.2.2",
+    "mongodb": "^3.2.7",
+    "nodemon": "^1.19.1",
+    "react_app": "^1.0.0",
+    "redis": "^2.8.0",
+    "request": "^2.88.0",
+    "requestify": "^0.2.5",
+    "watson-developer-cloud": "^4.0.1",
+    "websocket": "^1.0.29"
+  }
+}

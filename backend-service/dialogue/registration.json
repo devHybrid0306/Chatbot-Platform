@@ -1,0 +1,141 @@
+{"dialog":[
+	{
+		"dialog_id":"reg_dialog.1",
+		"intent":"register",
+		"response":{
+			"en":"Hello, registration is easy! :br: Don't worry. I have a few question to ask to get you started. :br: Which would you like to use?",
+			"ar":"",
+			"quick_replies": [
+				{
+					"title": "Use Social Media Account",
+					"payload" : "Use Social Media Account"
+				},
+				{
+					"title": "Use Phone Number",
+					"payload" : "Use Phone Number"
+				}
+			]
+	    }
+
+	},
+	{
+		"dialog_id":"reg_dialog.2",
+		"intent":"phone_num_reg",
+		"entities":[
+				{
+					"entity":"uae_phone_number",
+					"response":{
+						"en":"What is your phone number?",
+						"ar":""
+					},
+					"invalid_response": {
+						"en":"That doesn't seem like a phone number.",
+						"ar":""
+					}
+				},
+				{
+					"entity":"sys-person",
+					"response":{
+						"en":"What is your name?",
+						"ar":""
+					},
+					"invalid_response": {
+						"en":"That doesn't seem to help us validate. Kindly capitalize the first letter of your name.",
+						"ar":""
+					}
+				}
+			],
+		"response":{
+			"en":"Now let's set a password",
+			"ar":"",
+			"action" : "register",
+			"quick_replies":[],
+			"attachments":[
+				{
+					"contentType":"button",
+					"mode": null,
+					"body":[
+						{
+							"content":"",
+							"title":"Set Password",
+							"subtitle":"",
+							"actions":[
+								{
+									"title": "Set Password",
+									"payload": "Set Password"
+								}
+							]
+						}
+					]
+				}
+			]
+	    }
+
+	},
+	{
+		"dialog_id":"reg_dialog.3",
+		"intent":"set_password",
+		"response":{
+			"en":"",
+			"ar":"",
+			"quick_replies":[],
+			"attachments":[
+				{
+					"contentType":"passwordCard",
+					"mode": "modal",
+					"body":[
+						{
+							"content":"",
+							"title":"Set Password",
+							"subtitle":"",
+							"actions":[
+								{
+									"title": "",
+									"payload": ""
+								}
+							]
+						}
+					]
+				}
+			]
+	    }
+	},
+	{
+		"dialog_id": "passwordSetRes",
+		"response": {
+			"en":"Well done! Your profile is now complete.",
+			"ar":"",
+			"attachments":[
+				{
+					"contentType":"imgCard",
+					"body":[
+						{
+							"content":"https://texascareercheck.com/Content/Images/balloon_unpopped.png",
+							"title":"",
+							"subtitle":"You just earned!",
+							"actions":""
+						}
+					]
+				},
+				{
+					"contentType":"button",
+					"mode": null,
+					"body":[
+						{
+							"content":"",
+							"title":"Go to Dashboard",
+							"subtitle":"",
+							"actions":[
+								{
+									"title": "Go to Dashboard",
+									"payload": "Go to Dashboard"
+								}
+							]
+						}
+					]
+				}
+
+			]
+		}
+	}
+]}

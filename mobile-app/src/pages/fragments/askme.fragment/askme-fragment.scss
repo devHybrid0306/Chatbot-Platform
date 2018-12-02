@@ -1,0 +1,23 @@
+askme-fragment {
+    
+    .main-page-picker {
+        //position: absolute;
+        bottom: 0px;
+        //background-color: #ccc;
+        margin-top: 30px;
+        width: 100%;
+       
+        
+    }
+    .main-page-picker-title {
+        font-family: 'Barlow', serif;
+        font-weight: bolder;
+        padding: 10px;
+        margin-left: 10px;
+        margin-right: 10px;
+        flex-wrap: wrap;
+        font-size: 16px;
+        word-wrap: normal;
+    }
+
+}

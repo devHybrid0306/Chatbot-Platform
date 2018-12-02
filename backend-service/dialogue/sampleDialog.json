@@ -1,0 +1,394 @@
+{"dialog":[
+	{
+		"dialog_id":"learning_dialog.1",
+		"intent":"learn",
+		"response":{
+			"en":"What is your current skill level?",
+			"ar":"",
+			"quick_replies":[{
+				"title":"I don't speak english",
+				"payload":"I don't speak english"
+			},
+			{
+				"title":"I can speak (a little) english",
+				"payload":"I can speak english"
+			}]
+		}
+	},
+
+	{
+		"dialog_id":"learning_dialog.4",
+		"intent":"from",
+		"response":{
+			"en":"I dont care",
+			"ar":""
+		}
+	},
+	{
+		"dialog_id":"learning_dialog.2",
+		"intent":"no_english",
+		"entities":[
+				{
+					"entity":"country",
+					"response":{
+						"en":"What country are you from?",
+						"ar":"",
+							"quick_replies":[{
+								"title":"Philippines",
+								"payload":"Philippines"
+							},
+							{
+								"title":"United Arab Emirates",
+								"payload":"United Arab Emirates"
+							}]
+						
+						
+					},
+					"invalid_response": {
+						"en":"That doesn't seem to be a country.",
+						"ar":"",
+						"quick_replies":[{
+							"title":"Philippines",
+							"payload":"Philippines"
+						},
+						{
+							"title":"United Arab Emirates",
+							"payload":"United Arab Emirates"
+						}]
+					}
+				},
+				{
+					"entity":"language",
+					"response":{
+						"en":"What language do you speak at home?",
+						"ar":"",
+						"quick_replies":[{
+							"title":"Tagalog",
+							"payload":"Tagalog"
+						},
+						{
+							"title":"Tamil",
+							"payload":"Tamil"
+						}]
+					},
+					"invalid_response": {
+						"en":"That doesn't seem to be a language.",
+						"ar":"",
+						"quick_replies":[{
+							"title":"Tagalog",
+							"payload":"Tagalog"
+						},
+						{
+							"title":"Tamil",
+							"payload":"Tamil"
+						}]
+					}
+				}
+			],
+		"response":{
+			"en":"Please watch the video below",
+			"ar":"",
+			
+				"quick_replies":[
+				{
+					"title":"I have finished the video",
+					"payload":"I have finished the video training_1"
+				}
+				],
+				"attachments":[
+					{
+						"contentType":"vidCard",
+						"body":[
+							{
+								"content": "https://www.youtube.com/embed/xug75AJdj0k",
+								"title" : null,
+								"subtitle" : null,
+								"actions":[
+									{
+										"title": "Show me more!",
+										"payload":"Show More V122"
+									}
+								]
+							}
+						]
+					}
+				]
+		}
+
+	},
+	{
+		"dialog_id":"learning_dialog.3",
+		"intent":"little_english",
+		"assess":{
+			"assessment":[
+				"assessment1"
+			]
+			
+		},
+		"response":{
+			"action":"assesment"
+		},
+		"assesment_response":[
+			{
+				"forward_node": "learning_dialog.3-1"
+			},
+			{
+				"forward_node": "learning_dialog.3-2"
+			}
+		]
+	},
+	{
+		"dialog_id":"learning_dialog.3-1",
+		"intent":"little_english",
+		"assess":{
+			"assessment":[
+				"assessment2"
+			]
+			
+		},
+		"response":{
+			"action":"assesment"
+		},
+		"assesment_response":[
+			{
+				"forward_node": "learning_dialog.2"
+			},
+			{
+				"en":"Please watch video for English 1",
+           		"ar":"",
+            	"attachments":[
+					{
+						"contentType":"vidCard",
+						"body":[
+							{
+								"content": "https://www.youtube.com/embed/xug75AJdj0k",
+								"title" : null,
+								"subtitle" : null,
+								"actions":[
+									{
+										"title": "Show me more!",
+										"payload":"Show More V122"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"dialog_id":"learning_dialog.3-2",
+		"intent":"little_english",
+		"assess":{
+			"assessment":[
+				"assessment3"
+			]
+			
+		},
+		"response":{
+			"action":"assesment"
+		},
+		"assesment_response":[
+			{
+				"en":"Please watch video for English 1",
+           		"ar":"",
+            	"attachments":[
+					{
+						"contentType":"vidCard",
+						"body":[
+							{
+								"content": "https://www.youtube.com/embed/xug75AJdj0k",
+								"title" : null,
+								"subtitle" : null,
+								"actions":[
+									{
+										"title": "Show me more!",
+										"payload":"Show More V122"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"en":"Please watch video for English 2",
+           		"ar":"",
+				   "attachments":[
+					{
+						"contentType":"vidCard",
+						"body":[
+							{
+								"content": "https://www.youtube.com/embed/Btwfb8PjPyE",
+								"title" : null,
+								"subtitle" : null,
+								"actions":[
+									{
+										"title": "Show me more!",
+										"payload":"Show More V122"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"dialog_id":"learning_dialog.5",
+		"intent":"register",
+		"entities": [
+			{
+				"entity":"used_to_reg",
+				"response":{
+					"en":"Which will you use to create your profile?",
+					"ar":"",
+						"quick_replies":[{
+							"title":"Use Social Media Account",
+							"payload":"Use Social Media Account"
+						},
+						{
+							"title":"Use Phone Number",
+							"payload":"Use Phone Number"
+						}]
+					
+					
+				},
+				"invalid_response": "I believe you cannot use that to create your profile."
+			} 
+		],
+		"response":{
+			"forward_node":"learning_dialog.7"
+		}
+	},
+	{
+		"dialog_id":"learning_dialog.6",
+		"intent":"login",
+		"response":{
+			"forward_node":"learning_dialog.7"
+		}
+	},
+	{
+		"dialog_id":"learning_dialog.7",
+		"intent":"view_content",
+		"response":{
+			"en":"View Content Options: ",
+			"ar":"",
+			"quick_replies":[{
+				"title":"Select Lesson",
+				"payload":"Select Lesson"
+			},
+			{
+				"title":"Choose other Goal",
+				"payload":"Choose other Goal"
+			}]
+		}
+	},
+	{
+		"dialog_id":"learning_dialog.8",
+		"intent":"choose_other_goal",
+		"response":{
+			"en":"Select from other learning paths available",
+			"ar": ""
+		}
+	},
+	{
+		"dialog_id":"learning_dialog.9",
+		"intent":"select_lesson",
+		"response":{
+			"en":"Lesson Options: ",
+			"ar":"",
+			"quick_replies":[{
+				"title":"Take Test",
+				"payload":"Take Test"
+			},
+			{
+				"title":"Skip Lesson",
+				"payload":"Skip Lesson"
+			}]
+		}
+	},
+	{
+		"dialog_id":"learning_dialog.10",
+		"intent":"take_test",
+		"assess":{
+			"assessment":[
+				"assessment4"
+			]
+			
+		},
+		"response":{
+			"action":"assesment"
+		},
+		"assesment_response":[
+			{
+				"en":"View same level content",
+           		"ar":"",
+				   "attachments":[
+					{
+						"contentType":"vidCard",
+						"body":[
+							{
+								"content": "https://www.youtube.com/embed/xug75AJdj0k",
+								"title" : null,
+								"subtitle" : null,
+								"actions":[
+									{
+										"title": "Show me more!",
+										"payload":"Show More V122"
+									}
+								]
+							}
+						]
+					}
+				]
+			},
+			{
+				"en":"View next level content",
+           		"ar":"",
+				   "attachments":[
+					{
+						"contentType":"vidCard",
+						"body":[
+							{
+								"content": "https://www.youtube.com/embed/Btwfb8PjPyE",
+								"title" : null,
+								"subtitle" : null,
+								"actions":[
+									{
+										"title": "Show me more!",
+										"payload":"Show More V122"
+									}
+								]
+							}
+						]
+					}
+				]
+			}
+		]
+	},
+	{
+		"dialog_id":"learning_dialog.11",
+		"intent":"skip_lesson",
+		"response":{
+			"en":"View same level content options.",
+			"ar": "",
+			"action" : "sampleDialog"
+		}
+	},
+	{
+		"dialog_id":"cannot_understand",
+		"response":{
+			"en":"Hmm, sorry I didn't quite catch that.",
+			"ar":""
+			
+		}
+		
+
+	}
+
+	
+	
+]}

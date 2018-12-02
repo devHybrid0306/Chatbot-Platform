@@ -1,0 +1,35 @@
+<!-- Generated template for the ImageCardComponent component -->
+<div class="message-row">
+    <!--ion-card>
+        
+        <ion-card-header>
+            <ion-card-subtitle> {{componentData.subtitle}}</ion-card-subtitle>
+            <ion-card-title>{{componentData.title}}</ion-card-title>
+        </ion-card-header>
+        <ion-card-content>
+            {{componentData.text}}
+        </ion-card-content>
+        <ion-img class="image" [src]="componentData.imageSource"></ion-img>
+      </ion-card-->
+    
+    <div class="message-box">   
+        <h3 *ngIf="componentData.title != null" >{{componentData.title}}</h3>
+        <p *ngIf="componentData.subtitle != null">{{componentData.subtitle}}</p>
+        <span *ngIf="componentData.text != null" class="video-card-text">{{componentData.text}}</span>
+        <img class="image" [src]="componentData.imageSource"/>  
+        <div *ngIf="componentData.selectionItems.length > 0">
+            <div *ngFor="let item of componentData.selectionItems; let i = index">
+                    <div 
+                        [id]="i" 
+                        class="image-selection-item"
+                        (click)="(isEnabled) ? onSelect($event) : null">
+                        <span [id]="i" class="image-selection-item-text" color="primary">{{item.title}}</span>
+                        <div class="image-selection-decoration">
+                                <ion-icon name="checkmark-circle" color="primary" 
+                                    *ngIf='item.isSelected'></ion-icon>
+                            </div>
+                    </div>
+            </div> 
+        </div>
+    </div>
+</div>

@@ -1,0 +1,88 @@
+page-dashboard {
+    .toolbar-title-ios {
+        text-align: start !important;
+    }
+    .toolbar-ios ion-title {
+        padding: 0px 20px 1px !important;
+    }
+   
+    .no-scroll {
+        height: 100%;
+        //background-color: #fff7f0;
+        background-image: linear-gradient(to bottom, #FBF5F4, #fff);
+        display: block;
+    }
+  
+    ion-icon {
+        color: #dd5239;
+    }
+
+
+
+    .top-button {
+        font-family: 'Barlow', sans-serif;
+        font-weight: bolder;
+        background-color: #FFB300;
+        color: black;
+        margin-right: 30px;
+        flex-wrap: wrap;
+        vertical-align: -webkit-baseline-middle;
+    }
+    
+    .message-footer {
+      display: -webkit-flex;
+      background-color: #888888;
+    }
+    
+    .toolbar-content-md {
+        display: -webkit-flex;
+        -webkit-box-orient: horizontal;
+    }
+    
+    .main-page-container {
+        top: 56px !important;
+        padding: 20px !important;
+       
+    }
+  
+    .bottom-tabs {
+        width: 100%;
+        display: -webkit-flex;
+        justify-content: space-around;
+    }
+
+    .tab-icon {
+        font-size: 20px;
+        color: darkgray;
+        text-align: center;
+    }
+
+    .tab {
+        display: grid;
+        align-content: center;
+        
+    }
+
+  // iOS specific
+  .text-input-ios {
+      width: calc(100% - 8px);
+      margin: 11px 11px 11px 5px;
+      padding: 0px 5px 0px 5px;
+  }
+  
+  .toolbar-content-ios {
+      display: -webkit-box;
+  }
+  
+  // windows phone specific
+  .text-input-wp {
+      border: none;
+      margin: 5px 8px;
+      padding: 0px 5px 0px 5px;
+      width: calc(100% - 8px - 8px);
+  }
+  
+  .toolbar-content-wp {
+      display: -webkit-box;
+  }
+}

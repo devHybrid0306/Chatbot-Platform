@@ -1,0 +1,49 @@
+selection-card {
+    
+    .selection-card {
+        overflow: hidden;
+        border-radius: 24px;
+        margin: 10px;
+        flex-wrap: wrap;
+        max-width: 70%;
+        background-color: white;
+        box-shadow: 1px 1px 7px #cccccc;
+    }
+
+    .selection-card-text {
+        padding: 10px;
+        padding-left: 20px;
+        color: black;
+    }
+
+    .selection-card-item {
+        padding: 10px;
+        border-top: #efefef;
+        border-top-width: 1px;
+        border-top-style: solid;
+       
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-width: 1px;
+       
+    }
+
+    .selection-card-item:active {
+        background-color: #efefef;
+    }
+
+    .selection-card-item-text {
+        margin: 10px;
+        //padding: 10px;
+        color: #E64125;
+        
+    }
+
+    .selection-decoration {
+        position: relative;
+        float: right;
+    }
+
+    
+}

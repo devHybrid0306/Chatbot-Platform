@@ -1,0 +1,27 @@
+{ 
+    "platforms":[
+        "web",
+        "android",
+        "ios"
+    ],
+    "mongodb":{
+        "local":true,
+        "host":"localhost",
+        "port":"27017"
+    },
+    "redis":{
+        "local":true,
+        "host":"localhost",
+        "port":"6379"
+    },
+    "use_watson":true,
+    "use_dialogflow":false,
+    "use_luis":false,
+    "NLP":{
+        "watson":{
+            "iam_apikey":"HdJMq8-PFBRatLAzSUh0xP8cXQedyTlHdh9Ws8oPq7GZ",
+            "url":"https://gateway.watsonplatform.net/assistant/api/",
+            "version":"2018-04-15"
+        }
+    }
+}

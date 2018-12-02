@@ -1,0 +1,19 @@
+country-selection {
+    .message-row {
+        padding: 5px !important;
+    }
+
+    .message-box {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+    }
+
+    .selection-box {
+        width: 100%;
+        max-height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+    }
+
+
+}

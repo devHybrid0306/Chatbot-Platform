@@ -1,0 +1,14 @@
+<!-- Generated template for the DatePickerComponent component -->
+<div class="message-row">
+        <button ion-button full class="button" (click) = "onClick()" >{{componentData.title}}</button>
+        <ion-item [hidden]="true">
+            <ion-label>Date</ion-label>
+            <ion-datetime 
+                displayFormat="MMM/DD/YYYY" 
+                [(ngModel)]="date" 
+                (ngModelChange)="onSave($event)"
+                (ionCancel)="destroy()">
+            </ion-datetime>
+        </ion-item>
+</div>
+

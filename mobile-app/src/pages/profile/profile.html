@@ -1,0 +1,139 @@
+<!--
+  Generated template for the ProfilePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header #header>
+        <ion-navbar> <!--hideBackButton-->
+            <button ion-button icon-only menuToggle>
+              <ion-icon name="menu"></ion-icon>
+            </button>
+        
+            <ion-title>
+                Profile
+            </ion-title>
+        
+            <ion-buttons end>
+                <button class="top-button" ion-button (click)="showPopover($event)">
+                    ASK ME
+                </button>
+            </ion-buttons>
+          </ion-navbar>
+    </ion-header>
+
+<ion-content>
+    <div class="profile-row profile-header">
+        <div class="profile-header-pic">
+        </div>
+        <h3 class="profile-header-text">Hi {{viewModel.profile.username}}</h3>
+    </div>
+    
+   
+        <ion-item-group>
+            <ion-item-divider class="profile-section">
+                <ion-label>PERSONAL INFORMATION</ion-label>
+            </ion-item-divider>
+            <ion-item class="profile-info" (click)="selectCountry()"> 
+                <ion-label>I am from</ion-label>
+                <ion-label class="profile-info-value"
+                    (ngModelChange)="onCountryChange($event)">{{(viewModel.profile.country != "") ? viewModel.profile.country :'select a country'}}</ion-label>
+            </ion-item>
+            <ion-item class="profile-info" (click)="selectLanguage()">
+                <ion-label>I can speak</ion-label>
+                <ion-label class="profile-info-value">{{viewModel.getLanguageLabel()}}</ion-label>
+            </ion-item>
+            <ion-item class="profile-info">
+                <ion-label>I am</ion-label>
+                <!--ion-label>Date</ion-label-->
+                <ion-datetime class="profile-info-value"
+                    displayFormat="MMM DD YYYY" 
+                    [(ngModel)]="viewModel.profile.birthdate" 
+                    (ngModelChange)="onBirthSave($event)">
+                </ion-datetime>
+            </ion-item>
+        </ion-item-group>
+       
+
+
+
+
+
+        <ion-item-group>
+            <ion-item-divider class="profile-section">
+                <ion-label>QUALIFICATIONS</ion-label>
+            </ion-item-divider>
+            <ion-item class="profile-info" (click)="showQualifications()"> 
+                <ion-label>I have a</ion-label>
+                <ion-label class="profile-info-value">{{(viewModel.profile.ifunivgrad != null) ? 
+                    viewModel.profile.ifunivgrad :
+                    viewModel.profile.skillsacquisition}}</ion-label>
+            </ion-item>
+            <ion-item class="profile-info" (click)="showQualifications()"> 
+                    <ion-label>I have a</ion-label>
+                    <ion-label class="profile-info-value">{{(viewModel.profile.coursecerttaken != null) ? 
+                        viewModel.profile.coursecerttaken :
+                        viewModel.profile.ifhsgrad}}</ion-label>
+            </ion-item>  
+        </ion-item-group>
+
+        <ion-item-group>
+            <ion-item-divider class="profile-section">
+                <ion-label>JOB INFORMATION</ion-label>
+            </ion-item-divider>
+            <ion-item class="profile-info"> 
+                <ion-label>I am a</ion-label>
+                <ion-label class="profile-info-value">{{viewModel.profile.occupation}}</ion-label>
+            </ion-item>
+            <ion-item class="profile-info"> 
+                    <ion-label>At work, I</ion-label>
+                    <ion-label class="profile-info-value">{{viewModel.profile.tasks}}</ion-label>
+            </ion-item>
+            <ion-item class="profile-info"> 
+                <ion-label>since</ion-label>
+                <ion-label class="profile-info-value">{{viewModel.profile.yearsofexperience}}</ion-label>
+            </ion-item>
+            <ion-item class="profile-info"> 
+                <ion-label>I earn</ion-label>
+                <ion-label class="profile-info-value">{{viewModel.profile.monthlyincome}}</ion-label>
+            </ion-item>
+        </ion-item-group>
+
+        <ion-item-group>
+                <ion-item-divider class="profile-section">
+                    <ion-label>CONTACT INFORMATION</ion-label>
+                </ion-item-divider>
+                <ion-item class="profile-info"> 
+                    <ion-label>Phone</ion-label>
+                    <ion-label class="profile-info-value">{{viewModel.profile.phonenumber}}</ion-label>
+                </ion-item>
+                <ion-item class="profile-info"> 
+                        <ion-label>Email</ion-label>
+                        <ion-label class="profile-info-value">{{viewModel.profile.email}}</ion-label>
+                    </ion-item>
+        </ion-item-group>
+        
+        <ion-item-group>
+                <ion-item-divider class="profile-section">
+                    <ion-label>POINTS EARNED</ion-label>
+                </ion-item-divider>
+                <ion-item class="profile-info"> 
+                    <ion-label>Points</ion-label>
+                    <ion-label class="profile-info-value">{{0}}</ion-label>
+                </ion-item>
+                
+        </ion-item-group>
+   
+</ion-content>
+
+<ion-tabs class="tabs-icon-top tabs-positive">
+
+        <ion-tab title="Login" icon="ion-home" ui-sref="tabs.login">
+          <ion-nav-view name="login-tab"></ion-nav-view>
+        </ion-tab>
+
+        <ion-tab title="Signup" icon="ion-ios-information" ui-sref="tabs.signup">
+          <ion-nav-view name="signup-tab"></ion-nav-view>
+        </ion-tab>
+</ion-tabs>
+    

@@ -1,0 +1,53 @@
+multi-select-card {
+    .multi-select-card {
+        overflow: hidden;
+        border-radius: 24px;
+        margin: 10px;
+        flex-wrap: wrap;
+        max-width: 70%;
+        background-color: white;
+        box-shadow: 1px 1px 7px #cccccc;
+    }
+
+
+    .multi-select-card-item {
+        padding: 10px;
+        border-top: #efefef;
+        border-top-width: 1px;
+        border-top-style: solid;
+       
+        border-bottom: none;
+        border-left: none;
+        border-right: none;
+        border-width: 1px;
+       
+    }
+
+    .multi-select-card-item:active {
+        background-color: #efefef;
+    }
+
+    .multi-select-card-item-text {
+        margin: 10px;
+        //padding: 10px;
+        color: #E64125;
+        
+    }
+
+    .multi-select-decoration {
+        position: relative;
+        float: right;
+    }
+
+    .multi-select-done {
+        background-color: transparent;
+        color: #888;
+
+    }
+
+    .multi-done-button {
+        float: right;
+        margin-right: 20px;
+        font-family: 'Barlow', sans-serif;
+    }
+}

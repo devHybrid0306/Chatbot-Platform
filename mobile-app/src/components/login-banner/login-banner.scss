@@ -1,0 +1,29 @@
+login-banner {
+    .banner {
+        padding: 56px;
+        margin-bottom: 200px;
+        height: 220px;
+        white-space: pre-line;
+       
+    }
+
+    .banner-text-header {
+        font-family: 'Merriweather', serif;
+        font-weight: bold;
+    }
+
+    .banner-text-normal {
+        font-family: 'Barlow', serif;
+       
+    }
+
+    .login-button {
+        color: white;
+        font-family: 'Barlow', sans-serif;
+        font-weight: bolder;
+        font-size: 14px;
+        width: 72px;
+        height: 36px;
+        margin-top: 20px;
+    }
+}

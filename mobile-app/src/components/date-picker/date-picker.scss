@@ -1,0 +1,19 @@
+date-picker {
+    .block-button-row {
+        display: inline-flexbox;
+        //margin-top: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
+
+    .button {
+        font-family: 'Barlow', sans-serif;
+        font-weight: bolder;
+        font-size: 14px;
+    }
+
+    .message-row {
+        padding: 5px !important;
+    }
+}

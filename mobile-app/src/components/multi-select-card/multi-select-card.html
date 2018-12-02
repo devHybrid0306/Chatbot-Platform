@@ -1,0 +1,21 @@
+<!-- Generated template for the MultiSelectCardComponent component -->
+<div class="message-row">
+        <div class="message-box">
+            <div class="message" [hidden]="hideText">{{componentData.text}}</div>
+            <div *ngFor="let item of componentData.selectionItems; let i = index">
+                <div 
+                    [id]="i" 
+                    class="multi-select-card-item">
+                    <ion-checkbox slot="start" [(ngModel)]="item.isSelected"></ion-checkbox>
+                    <span [id]="i" class="multi-select-card-item-text" color="primary">{{item.title}}</span>
+                </div>
+            </div> 
+            <div class="multi-select-done" 
+                (click)="(isEnabled) ? onSelect($event) : null"
+                [hidden]="hideButton">
+                    <div class="multi-select-card-item multi-done-button">
+                        DONE
+                    </div>
+            </div>           
+        </div>
+</div>

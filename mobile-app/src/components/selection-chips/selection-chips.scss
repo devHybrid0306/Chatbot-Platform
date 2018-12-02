@@ -1,0 +1,42 @@
+selection-chips {
+    .chip-container {
+        display: flow-root;
+        flex-wrap: wrap;
+        overflow: hidden;
+    }
+
+    .chip-item {
+        margin: 5px;
+        background-color: white;
+        border-color: #cccccc;
+        border-style: solid;
+        border-width: 0.5px; 
+        color: #696969;
+        float: none;
+
+        border-radius: 24px;
+        padding: 8px; 
+        flex-wrap: wrap;
+        float: right;
+    }
+
+    
+    .chip-item:active {
+        background-color: #E64125;
+        color: white;
+    }
+
+    .chip-item:hover {
+        background-color: #E64125; 
+        color: white; 
+    }
+
+    .label-md-secondary {
+        color: black;
+    }
+
+    .label-md-secondary:active  {
+        color: white;
+    }
+    
+}

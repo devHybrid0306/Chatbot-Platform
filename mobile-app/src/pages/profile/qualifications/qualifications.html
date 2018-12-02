@@ -1,0 +1,75 @@
+<ion-header>
+        <ion-navbar>
+          <ion-title>Qualifications</ion-title>
+          <ion-buttons end>
+                  <button ion-button icon-only (click)="onClose()">
+                      <ion-icon name="close"></ion-icon>
+                  </button>
+          </ion-buttons>
+        </ion-navbar>
+</ion-header>
+
+<ion-content>
+    <ion-list>
+        <ion-item>
+            <ion-label class="section-label">Did you finish high school?</ion-label>
+        </ion-item>
+        <ion-item (click)="viewModel.setDidFinishHighSchool(true)">
+            <ion-label>Yes</ion-label>
+            <ion-icon name="checkmark" item-right *ngIf="viewModel.didFinishHighSchool"></ion-icon>
+        </ion-item>
+        <ion-item (click)="viewModel.setDidFinishHighSchool(false)">
+            <ion-label>No</ion-label>
+            <ion-icon name="checkmark" item-right *ngIf="!viewModel.didFinishHighSchool"></ion-icon>
+        </ion-item>
+    </ion-list>
+
+
+    
+    <ion-list *ngIf="viewModel.didFinishHighSchool">
+            <ion-item>
+                <ion-label class="section-label">Do you have a University degree?</ion-label>
+            </ion-item>
+            <ion-item (click)="viewModel.setDidFinishCollege(true)">
+                <ion-label>Yes</ion-label>
+                <ion-icon name="checkmark" item-right *ngIf="viewModel.didFinishCollege"></ion-icon>
+            </ion-item>
+            <ion-item (click)="viewModel.setDidFinishCollege(false)">
+                <ion-label>No</ion-label>
+                <ion-icon name="checkmark" item-right *ngIf="!viewModel.didFinishCollege"></ion-icon>
+            </ion-item>
+    </ion-list>
+
+
+
+    <ion-list *ngIf="!viewModel.didFinishHighSchool || !viewModel.didFinishCollege">
+            <ion-item>
+                <ion-label class="section-label">How did you get your job skills?</ion-label>
+            </ion-item>
+            <ion-item (click)="viewModel.setSkillTypeNoHS('Learnt on the job')">
+                <ion-label>Learnt on the job</ion-label>
+                <ion-icon name="checkmark" item-right *ngIf="'Learnt on the job' == viewModel.skillTypeNoHS"></ion-icon>
+            </ion-item>
+            <ion-item (click)="viewModel.setSkillTypeNoHS('Course or Certificate')">
+                <ion-label>Course or Certificate</ion-label>
+                <ion-icon name="checkmark" item-right *ngIf="'Course or Certificate' == viewModel.skillTypeNoHS"></ion-icon>
+            </ion-item>
+    </ion-list>
+
+    <ion-item lines="none" *ngIf="viewModel.skillTypeNoHS == 'Course or Certificate'">
+        <ion-label floating class="section-label">What course did you do?</ion-label>
+        <ion-input type="text" color="loginText" [(ngModel)]="viewModel.course"></ion-input>
+    </ion-item>
+
+    <ion-item lines="none" *ngIf="viewModel.didFinishCollege">
+            <ion-label floating class="section-label">What degree do you have?</ion-label>
+            <ion-input type="text" color="loginText" [(ngModel)]="viewModel.course"></ion-input>
+    </ion-item>
+
+    <div class="login-button-container">
+            <button ion-button block 
+            class="login-button"
+            (click) = "onComplete()"
+            [disabled]="">Save</button>
+        </div>
+</ion-content>

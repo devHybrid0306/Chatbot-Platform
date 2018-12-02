@@ -1,0 +1,25 @@
+modal-container {
+    .message-box {
+        border-radius: 0px !important;
+        //padding: 10px; 
+        margin: 0px !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        background-color: white;
+        box-shadow: 0px 0px 0px #cccccc !important;
+        overflow: hidden !important;
+    }
+
+    .video-content-card {
+        border-radius: 0px !important;
+        //padding: 10px; 
+        margin: 0px !important;
+        flex-wrap: nowrap !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        background-color: white;
+        box-shadow: 0px 0px 0px #cccccc !important;
+        overflow: hidden;
+    }
+}

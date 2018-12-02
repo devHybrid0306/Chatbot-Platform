@@ -1,0 +1,9 @@
+<!-- Generated template for the QuickActionComponent component -->
+<div class="action-row">
+  <div *ngFor="let action of componentData.actionList; let i = index">
+     
+      <div [id]="i" class="action-item message" (click)="onClick($event)">
+            {{action.title == undefined ? action : action.title}}
+      </div>
+  </div>
+</div>

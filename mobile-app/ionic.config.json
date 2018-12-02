@@ -1,0 +1,7 @@
+{
+  "name": "mobile-smartlabour-container-temp",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "ionic-angular"
+}

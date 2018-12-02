@@ -1,0 +1,8 @@
+<!-- Generated template for the SimpleMessageComponent component -->
+<div class="message-row">
+  <div class="messages">
+    <div [class]="componentData.tag < 1 ? 'message messageLeft' : 'message messageRight'">
+     {{componentData.text}}
+    </div>
+  </div>
+</div>

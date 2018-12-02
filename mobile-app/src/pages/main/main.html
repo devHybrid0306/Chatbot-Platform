@@ -1,0 +1,41 @@
+<!--
+  Generated template for the MainPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<div class="main-page-container">
+    <div class = "banner">
+            <span class="banner-text-header" >
+                <h1>Hello, 👋<br/>I'm SmartBot - your learning guide.</h1> 
+            </span>
+            <span class="banner-text-normal">
+                Improve and practice a skill or pick up something new.
+            </span>
+            <button ion-button class="login-button" 
+                (click)="onLogin()">
+                LOGIN OR REGISTER
+            </button>
+
+    </div>
+
+    <div class="main-page-picker">
+        <askme-fragment [delegate]="self"></askme-fragment>
+        
+        <!--ion-list>
+            <ion-item>
+                <ion-label class="main-page-picker-title">
+                    What would you like to start with today? 
+                </ion-label>
+             </ion-item>
+             <div  *ngFor="let task of viewModel.taskSelectionList; let i = index">
+                <ion-item detail-push (click)="onPickerSelect($event)">
+                    <ion-label class="main-page-picker-item">
+                        {{task}}
+                    </ion-label>
+                </ion-item>
+            </div>
+        </ion-list-->
+    </div>
+</div>

@@ -1,0 +1,19 @@
+<!-- Generated template for the CountrySelectionComponent component -->
+<div class="message-row">
+    <div #messageBox class="message-box">
+        <ion-searchbar 
+            [(ngModel)]="searchString"
+            (ionChange)="search()"></ion-searchbar>
+          
+            <div #listContainer 
+                class="selection-box">
+                <div *ngFor="let country of countries">
+                    <ion-item [id]="country.code"
+                        [innerHTML]="model.countryStringForCode(country.code)"
+                        (click)="onSelect($event)">
+                
+                    </ion-item>
+                </div>
+            </div>
+        </div>
+</div>

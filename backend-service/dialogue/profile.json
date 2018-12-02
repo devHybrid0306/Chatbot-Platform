@@ -1,0 +1,483 @@
+{"dialog":[
+	{
+		"dialog_id":"profile_dialog.1",
+		"intent":"profile",
+		"entities":[
+				{
+					"entity":"monthly_income",
+					"response":{
+						"en":"",
+						"ar":"",
+						"attachments":[
+							{
+								"mode": null,
+								"contentType":"selectionCard",
+								"body":[
+									{
+										"content": "",
+										"title" : "What is your monthly income?",
+										"subtitle" : null,
+										"actions":[
+											{
+												"title":"Less than AED 1,000",
+												"payload":"Less than AED 1,000"
+											},
+											{
+												"title":"AED 1,000 - AED 5,000",
+												"payload":"AED 1,000 - AED 5,000"
+											},
+											{
+												"title":"More than AED 5,000",
+												"payload":"More than AED 5,000"
+											}
+										]
+									}
+								]
+							}
+						]				
+						
+					}
+				},
+				{
+					"entity":"work_started",
+					"response":{
+						"en":"When did you start working in Dubai?",
+						"ar":"",
+						"attachments":[
+                            {
+                                "mode":null,
+                                "contentType":"datePicker",
+                                "body":[{
+                                    "content":"",
+                                    "title":"Date Picker",
+                                    "subtitle":"",
+                                    "actions": [
+                                        {
+                                            "title":"Date Picker",
+                                            "payload":"Date Picker"
+                                        }
+                                    ]
+                                }]
+							}
+						]     
+					}
+				},
+				{
+					"entity":"task",
+					"response":{
+						"action":"filterTasks"	
+					},
+					"invalid_response": {
+						"en":"That doesn't seem to be a task for your job.",
+						"ar":"",
+						"action":"filterTasks"	
+					}
+				},
+				{
+					"entity":"occupation",
+					"response":{
+						"en":"That's great! Let us build your profile. This help us recommend courses for you. :br: To begin, tell us about your work experience. :br: What job do you do?",
+						"ar":"",
+						"attachments":[
+							{
+								"mode": null,
+								"contentType":"selectionChips",
+								"body":[
+									{
+										"content": "",
+										"title" : null,
+										"subtitle" : null,
+										"actions":[
+											{
+												"title":"Cleaner",
+												"payload":"Cleaner"
+											},
+											{
+												"title":"Construction Worker",
+												"payload":"Construction Worker"
+											},
+											{
+												"title":"Driver",
+												"payload":"Driver"
+											},
+											{
+												"title":"Nanny",
+												"payload":"Nanny"
+											},
+											{
+												"title":"Office Worker",
+												"payload":"Office Worker"
+											},
+											{
+												"title":"Restaurant Staff",
+												"payload":"Restaurant Staff"
+											},
+											{
+												"title":"Retail & Sales",
+												"payload":"Retail & Sales"
+											},
+											{
+												"title":"Security Guard",
+												"payload":"Security Guard"
+											},
+											{
+												"title":"Technician",
+												"payload":"Technician"
+											}
+										]
+									}
+								]
+							}
+						]				
+						
+					},
+					"invalid_response": {
+						"en":"That doesn't seem to be a job.",
+						"ar":"",
+						"attachments":[
+							{
+								"mode": null,
+								"contentType":"selectionChips",
+								"body":[
+									{
+										"content": "",
+										"title" : null,
+										"subtitle" : null,
+										"actions":[
+											{
+												"title":"Cleaner",
+												"payload":"Cleaner"
+											},
+											{
+												"title":"Construction Worker",
+												"payload":"Construction Worker"
+											},
+											{
+												"title":"Driver",
+												"payload":"Driver"
+											},
+											{
+												"title":"Nanny",
+												"payload":"Nanny"
+											},
+											{
+												"title":"Office Worker",
+												"payload":"Office Worker"
+											},
+											{
+												"title":"Restaurant Staff",
+												"payload":"Restaurant Staff"
+											},
+											{
+												"title":"Retail & Sales",
+												"payload":"Retail & Sales"
+											},
+											{
+												"title":"Security Guard",
+												"payload":"Security Guard"
+											},
+											{
+												"title":"Technician",
+												"payload":"Technician"
+											}
+										]
+									}
+								]
+							}
+						]	
+					}
+				}
+
+            ],
+
+				"response":{
+					"en": "That's great! Thank you. :br: Is this information correct?",
+					"action" : "profile",
+					"attachments":[
+						{
+							"contentType":"selectionCard",
+							"body":[
+								{
+									"content": "",
+									"title" : "YOUR PROFILE",
+									"subtitle" : null,
+									"actions":[
+										{
+											"title": "OK, LOOKS GOOD",
+											"payload":"OK, LOOKS GOOD"
+										}
+									]
+								}
+							]
+						}
+					]
+
+				}
+	},
+	{
+		"dialog_id":"profile_dialog.1.0",
+		"intent": "confirm_profile",
+		"response": {
+			"en":"Do you want to continue building your profile?",
+			"ar":"",
+			"quick_replies":[
+				{
+					"title":"Yes, let's continue",
+					"payload":"Yes, let's continue"
+				},
+				{
+					"title":"No, not now",
+					"payload":"No, not now"
+				}
+			]
+		}
+	},
+	{
+		"dialog_id":"profile_dialog.1.0.1",
+		"intent":"continue_profile",
+		"entities":[
+			{
+				"entity":"country",
+				"response":{
+					"en":"Which country are you from?",
+					"ar":"",
+					
+					"attachments":[
+						{
+							"contentType":"countrySelection",
+							"body":[{
+								"content":"",
+								"title":"Select country",
+								"subtitle":"",
+								"actions": [
+									{
+										"title":"",
+										"payload":""
+									}
+								]
+							}]
+						}]
+				},
+				"invalid_response": {
+					"en":"I'm sorry that doesn't seem to be a country or your country isn't supported yet.",
+					"ar":"",
+					
+					"attachments":[
+						{
+							"contentType":"countrySelection",
+							"body":[{
+								"content":"",
+								"title":"Select country",
+								"subtitle":"",
+								"actions": [
+									{
+										"title":"",
+										"payload":""
+									}
+								]
+							}]
+						}
+					]	
+				}
+			}
+		],
+		"response":{
+			"en":"Did you finish high school?",
+			"ar": "",
+			
+			"quick_replies":[
+				{
+					"title":"Yes",
+					"payload":"I finished high school"
+				},
+				{
+					"title":"No",
+					"payload":"I didn't finish high school"
+				}
+			]
+		}
+	},
+	{
+		"dialog_id": "profile_dialog.1.0.1.0",
+		"intent": "hs_grad",
+		"response":{
+			"en":"Do you have a university degree",
+			"ar":"",
+		
+			"quick_replies":[
+				{
+					"title":"Yes",
+					"payload":"I finished college"
+				},
+				{
+					"title":"No",
+					"payload":"I have not finished college"
+				}
+			]
+		}
+	},
+	{
+		"dialog_id": "profile_dialog.1.0.1.1",
+		"intent": "not_hs_grad",
+		"response":{
+			"en":"How did you get your job skills?",
+			"ar": "",
+		
+			"quick_replies":[
+				{
+					"title":"Learnt on the job",
+					"payload":"Learnt on the job"
+				},
+				{
+					"title":"Course / Certification",
+					"payload":"Course / Certification"
+				}
+			]
+		}
+	},
+	{
+		"dialog_id": "profile_dialog.1.0.1.1.0",
+		"intent": "learnt_on_job",
+		"response":{
+			"en":"Looks good! We are going to remember that. Thank you!",
+			"ar":"",
+			"action" : "profile"
+		}
+	},
+	{
+		"dialog_id": "profile_dialog.1.0.1.1.1",
+		"intent": "course_cert",
+		"response":{
+			"en":"What course did you take?",
+			"ar": "",
+			"action" : "profile"
+		}
+	},
+	{
+		"dialog_id": "profile_dialog.1.0.1.0.0",
+		"intent": "univ_grad",
+		"response":{
+			"en":"What degree do you have?",
+			"ar":"",
+			"action" : "profile"
+		}
+	},
+	{
+		"dialog_id": "profile_dialog.1.0.1.0.1",
+		"intent": "not_univ_grad",
+		"response":{
+			"forward_node":"profile_dialog.1.0.1.1"
+		}
+	},
+	{
+		"dialog_id":"profile_dialog.1.0.2",
+		"intent":"discontinue_profile",
+		"response":{
+			"en":"",
+			"ar":"",
+			"attachments":[
+				{
+					"contentType":"button",
+					"mode": null,
+					"body":[
+						{
+							"content":"",
+							"title":"View Profile",
+							"subtitle":"",
+							"actions":[
+								{
+									"title": "View Profile",
+									"payload": "View Profile"
+								}
+							]
+						}
+					]
+				},
+				{
+					"contentType":"button",
+					"mode": null,
+					"body":[
+						{
+							"content":"",
+							"title":"Go to Dashboard",
+							"subtitle":"",
+							"actions":[
+								{
+									"title": "Go to Dashboard",
+									"payload": "Go to Dashboard"
+								}
+							]
+						}
+					]
+				}
+			]
+		}
+	},
+	{
+		"dialog_id":"profile_dialog.2",
+		"entities":[
+			{
+				"entity":"gender",
+				"response":{
+					"en":"What is your gender?",
+					"ar":"",
+						"quick_replies":[{
+							"title":"Male",
+							"payload":"Male"
+						},
+						{
+							"title":"Female",
+							"payload":"Female"
+						}]									
+				},
+				"invalid_response": {
+					"en":"That doesn't seem to be a gender.",
+					"ar":"",
+					"quick_replies":[{
+						"title":"Male",
+						"payload":"Male"
+					},
+					{
+						"title":"Female",
+						"payload":"Female"
+					}]
+				}
+			},
+			{
+				"entity":"age",
+				"response":{
+					"en":"How old are you?",
+					"ar":""					
+					
+				},
+				"invalid_response": {
+					"en":"That doesn't seem like an age.",
+					"ar":""
+				}
+			}
+		]
+	},
+	{
+		"dialog_id":"responseTemplate",
+		"template": [
+			{	
+				"response":{
+					"en":"",
+					"ar":"",
+					"attachments":[
+						{
+							"contentType":"multiSelectCard",
+							"body":[{
+								"content":"",
+								"title":"What tasks did you do this week?",
+								"subtitle":"",
+								"actions": ""
+							}]
+						}]
+				}
+			}
+		]
+	}
+
+
+]}

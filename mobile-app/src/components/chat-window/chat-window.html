@@ -1,0 +1,30 @@
+<!-- Generated template for the ComponentsChatWindowComponent component -->
+<div #contentContainer class="message-content-container">
+    <ion-content chat-window-directive 
+        [chatWindowTargetElement]="target" 
+        [chatScrollExecute]="scrollExecuteBlock"
+        [chatDirectiveInit]="scrollInitExecuteBlock"
+
+        id="messageContentScrollView" 
+        class="message-content" 
+        #content  >
+        
+        <div class="message-container">
+            <div id="msgContainerID" #messageContainer></div>
+        </div>
+        
+    </ion-content>
+    <div class="action-container" #actionPane>
+            <div id="actionContainerID"  #actionContainer ></div>
+    </div>
+    
+</div>
+ <!-- User input area at the bottom of the screen -->
+ <ion-footer #footer class="message-footer" >
+    <ion-toolbar #textInputPane color="neutral">
+        <ion-input class="message-input-text" type="text" [(ngModel)]="inputMessage"></ion-input>
+            <button ion-button icon-only (click)="sendMessage()" class="send-message-button">
+                <ion-icon name="send"></ion-icon>
+            </button>
+    </ion-toolbar>
+</ion-footer>

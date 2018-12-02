@@ -1,0 +1,42 @@
+quick-action {
+    .action-row {
+        display: -webkit-inline-box;
+        //margin-top: 20px;
+        width: 100%;
+        flex-wrap: wrap;
+
+    }
+
+    .action-item {
+        margin: 5px;
+        background-color: white;
+        border-color: #cccccc;
+        border-style: solid;
+        border-width: 0.5px; 
+        color: #696969;
+        float: none;
+
+        border-radius: 24px;
+        padding: 10px; 
+        flex-wrap: wrap;
+      
+    }
+
+    .action-item:active {
+        background-color: #E64125;
+        color: white;
+    }
+
+    .action-item:hover {
+        background-color: #E64125; 
+        color: white; 
+    }
+
+    .label-md-secondary {
+        color: black;
+    }
+
+    .label-md-secondary:active  {
+        color: white;
+    }
+}

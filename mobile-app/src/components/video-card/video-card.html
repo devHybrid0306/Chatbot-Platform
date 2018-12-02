@@ -1,0 +1,32 @@
+<!-- Generated template for the VideoCardComponent component -->
+<div class="message-row">
+    
+        
+        <div class="video-content-card">
+            <div class="video-container" #videoContainer>
+                <video *ngIf="(componentData.imageSource.includes('.mp4') || componentData.imageSource.includes('.ogg'))" #videoScreen class="video" (click)="onPlay()">
+                    <source [src]="componentData.imageSource" type="video/mp4">
+                    <source [src]="componentData.imageSource" type="video/ogg">
+                </video>
+                <div #videoEmbedContainer class="video-frame-container">
+                    <iframe #videoIFrame class="video" [src]="embed" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                </div>
+            </div>
+
+            
+           
+            <h3 *ngIf="componentData.title != null" >{{componentData.title}}</h3>
+            <p *ngIf="componentData.subtitle != null">{{componentData.subtitle}}</p>
+            <span *ngIf="componentData.text != null" class="video-card-text">{{componentData.text}}</span>
+            
+            <div *ngFor="let item of componentData.selectionItems; let i = index">
+                    <div 
+                        [id]="i" 
+                        class="video-selection-item"
+                        (click)="onSelect($event)">
+                        <span [id]="i" class="video-selection-item-text" color="primary">{{item.title}}</span>
+                    </div>
+            </div> 
+        </div>
+    </div>
+    
